@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel index.html",
     "build": "parcel build index.html",
-    "postinstall": "chmod +x ./node_modules/.bin/parcel"
+    
   },
   "author": "",
   "license": "ISC",
