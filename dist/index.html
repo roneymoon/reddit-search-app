@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Reddit Search App</title>
+</head>
+
+
+<body class="bg-blue-100 dark">
+    <!-- Navigation Bar -->
+    <nav class="w-full h-[4rem] bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 pt-2 pl-8 flex items-center mb-[4rem] shadow-lg">
+        <div class="logo font-bold text-4xl text-white">
+            Finddit
+        </div>
+        <ul class="flex font-semibold absolute right-[5rem] space-x-9 text-lg text-white">
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+        
+    </nav>
+
+    <!-- Main Search Container -->
+    <div class="search-container flex-col justify-center ml-[25rem]">
+        <!-- <div class="alert bg-red-400 w-[40rem] text-white text-center mb-5 rounded-xl p-[1.3rem] border border-1 border-red-700s">
+            Please enter a Valid Search term
+        </div> -->
+        <div class="search bg-white w-[30rem] p-8 rounded-lg shadow-xl">
+            <h1 class="text-4xl text-center text-blue-900 font-medium mb-6">Reddit Search App</h1>
+            <form class="search-form space-y-6">
+                <!-- Search Input -->
+                <div class="flex flex-col items-center">
+                    <input type="text" class="search-input border-2 border-gray-300 rounded-md p-3 w-full max-w-[30rem] text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your search term">
+                </div>
+
+                <!-- Sort By -->
+                <div class="flex items-center justify-between">
+                    <label for="sort" class="text-lg text-gray-700">Sort By:</label>
+                    <div class="space-x-6">
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="sort" value="relevance" class="form-radio text-blue-500" checked="">
+                            <span class="ml-2 text-gray-700">Relevance</span>
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="sort" value="latest" class="form-radio text-blue-500">
+                            <span class="ml-2 text-gray-700">Latest</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Limit Dropdown -->
+                <div class=" flex items-center justify-between">
+                    <label for="limit" class="text-lg text-gray-700">Limit:</label>
+                    <select id="limit" class="border-2 border-gray-300 rounded-md p-3 pr-6 w-full max-w-[10rem] text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none">
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                    </select>
+                </div>
+
+
+                <!-- Search Button -->
+                <div class="flex justify-center">
+                    <button type="submit" class="search-btn w-full py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-lg font-semibold rounded-md hover:bg-gradient-to-l focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        Search
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="result"></div>
+    </div>
+
+    <script src="/reddit-search-app-parcel-fetch.e31bb0bc.js"></script>
+</body>
+
+</html>
